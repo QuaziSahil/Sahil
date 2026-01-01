@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // If it's an internal page link
-            if (href.endsWith('.html') || href === '/') {
+            if (href.endsWith('.html') || href === '/' || href.startsWith('./') || (!href.startsWith('http') && !href.startsWith('#'))) {
                 e.preventDefault();
 
                 // Animate overlay
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     setTimeout(() => {
                         window.location.href = href;
-                    }, 600); // Match CSS transition duration
+                    }, 800); // Match CSS transition duration
                 } else {
                     window.location.href = href;
                 }
