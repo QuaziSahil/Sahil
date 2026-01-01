@@ -61,7 +61,10 @@
                     </div>
                 </div>
 
-                <form class="contact-form reveal" id="contactForm">
+                <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xpwzqpnv"
+                    method="POST">
+                    <input type="hidden" name="_subject" value="New message from Sahil Portfolio">
+                    <input type="hidden" name="_next" value="https://sahil-me.vercel.app/contact.html?success=true">
                     <div class="form-group">
                         <input type="text" id="name" name="name" required>
                         <label for="name">Your Name</label>
@@ -85,6 +88,8 @@
                             <polygon points="22 2 15 22 11 13 2 9 22 2" />
                         </svg>
                     </button>
+                    <p id="formSuccess" class="form-message success" style="display: none;">✅ Message sent successfully!
+                        I'll get back to you soon.</p>
                 </form>
             </div>
         </div>
