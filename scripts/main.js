@@ -39,22 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (link.target === '_blank' || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href === 'javascript:void(0)') {
                 return;
             }
-
-            // If it's an internal page link
-            if (href.endsWith('.html') || href === '/' || href.startsWith('./') || (!href.startsWith('http') && !href.startsWith('#'))) {
-                e.preventDefault();
-
-                // Animate overlay
-                if (transitionOverlay) {
-                    transitionOverlay.classList.add('active');
-
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 500); // Match CSS transition duration
-                } else {
-                    window.location.href = href;
-                }
-            }
+            // Normal navigation - no transition delay
         });
     });
 
