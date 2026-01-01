@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     setTimeout(() => {
                         window.location.href = href;
-                    }, 800); // Match CSS transition duration
+                    }, 500); // Match CSS transition duration
                 } else {
                     window.location.href = href;
                 }

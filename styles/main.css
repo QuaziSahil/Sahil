@@ -1029,7 +1029,7 @@ section {
     background: radial-gradient(circle at center, var(--rose-500), var(--rose-900), #000);
     z-index: 9999;
     clip-path: circle(0% at 50% 50%);
-    transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
 }
 
