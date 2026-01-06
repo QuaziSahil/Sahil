@@ -4,121 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Quazi Sahil Mahammad - Content Writer & Designer</title>
+    <title>Services - Quazi Sahil Mahammad</title>
+    <meta name="description"
+        content="Professional services by Quazi Sahil Mahammad - Content Writing, Web Design, and Brand Development.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
 </head>
 
 <body class="page-services">
+    <!-- Cursor Glow -->
     <div class="cursor-glow"></div>
+    <div class="noise-overlay"></div>
     <div class="page-transition-overlay"></div>
 
+    <!-- Floating Fragments -->
+    <div class="fragments-container">
+        <div class="fragment fragment--triangle fragment-1"></div>
+        <div class="fragment fragment--diamond fragment-2"></div>
+        <div class="fragment fragment--line fragment-3"></div>
+        <div class="fragment fragment--triangle fragment-4"></div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navbar">
-        <a href="index.html" class="logo">Sahil<span>.</span></a>
-        <ul class="nav-links">
-            <li><a href="about.html" class="nav-item">About</a></li>
-            <li><a href="services.html" class="nav-item active">Services</a></li>
-            <li><a href="projects.html" class="nav-item">Projects</a></li>
-            <li><a href="contact.html" class="nav-item">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <a href="index.html" class="logo">SAHIL<span>.</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
-    <section class="services section-page">
+    <!-- Full-screen Menu Overlay -->
+    <div class="menu-overlay">
+        <nav class="menu-nav">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services" style="padding-top: 180px;">
         <div class="container">
-            <h2 class="section-title reveal">My <span class="gradient-text">Services</span></h2>
-            <p class="section-subtitle reveal">What I can do for you</p>
+            <div class="section-header reveal">
+                <p class="section-label">What I Offer</p>
+                <h1 class="section-title">MY <span>SERVICES</span></h1>
+            </div>
 
             <div class="services-grid">
-                <!-- Web Development -->
-                <div class="service-card reveal" data-tilt>
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <rect x="2" y="3" width="20" height="14" rx="2" />
-                            <path d="M8 21h8M12 17v4" />
-                        </svg>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Custom websites and web applications built with modern technologies. Fast, responsive, and
-                        SEO-optimized.</p>
-                    <ul class="service-features">
-                        <li>Responsive Design</li>
-                        <li>Modern Animations</li>
-                        <li>SEO Optimized</li>
-                    </ul>
-                    <a href="contact.html" class="service-link">Get Started <svg width="16" height="16"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg></a>
+                <div class="service-card reveal reveal-delay-1">
+                    <span class="service-number">01</span>
+                    <h3>Content Writing</h3>
+                    <p>Engaging blog posts, articles, and web copy that captivate your audience. SEO-optimized content
+                        that ranks and converts.</p>
                 </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <span class="service-number">02</span>
+                    <h3>Web Design</h3>
+                    <p>Beautiful, responsive websites built with modern technologies. From landing pages to full web
+                        applications.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <span class="service-number">03</span>
+                    <h3>Brand Identity</h3>
+                    <p>Complete visual identity packages including logos, color palettes, typography, and brand
+                        guidelines.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <span class="service-number">04</span>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered interface design that balances aesthetics with usability. Figma prototypes and
+                        design systems.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <span class="service-number">05</span>
+                    <h3>SEO Optimization</h3>
+                    <p>Technical and content SEO to improve your search rankings. Keyword research, meta optimization,
+                        and analytics.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <span class="service-number">06</span>
+                    <h3>Consulting</h3>
+                    <p>Strategic advice on digital presence, content strategy, and brand development. One-on-one
+                        sessions available.</p>
+                </div>
+            </div>
 
-                <!-- Graphic Design -->
-                <div class="service-card reveal" data-tilt>
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10" />
-                            <path d="M2 12h20" />
-                        </svg>
-                    </div>
-                    <h3>Graphic Design</h3>
-                    <p>Eye-catching logos, banners, social media graphics, and brand identity that makes you stand out.
-                    </p>
-                    <ul class="service-features">
-                        <li>Logo Design</li>
-                        <li>Social Media Graphics</li>
-                        <li>Brand Identity</li>
-                    </ul>
-                    <a href="contact.html" class="service-link">Get Started <svg width="16" height="16"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg></a>
-                </div>
-
-                <!-- Canva Pro -->
-                <div class="service-card featured reveal" data-tilt>
-                    <div class="featured-badge">Popular</div>
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                            <path d="M2 17l10 5 10-5" />
-                            <path d="M2 12l10 5 10-5" />
-                        </svg>
-                    </div>
-                    <h3>Canva Pro</h3>
-                    <div class="price-tag"><span class="price">$2</span><span class="period">/month</span></div>
-                    <p>Get access to Canva Pro with all premium features at an unbeatable price.</p>
-                    <ul class="service-features">
-                        <li>Premium Templates</li>
-                        <li>Brand Kit</li>
-                        <li>Magic Resize</li>
-                    </ul>
-                    <a href="contact.html" class="service-link">Subscribe Now <svg width="16" height="16"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg></a>
-                </div>
+            <div class="projects-cta reveal" style="margin-top: 80px; text-align: center;">
+                <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 18px;">Ready to start your
+                    project?</p>
+                <a href="contact.html" class="btn btn-primary">Get in Touch</a>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="copyright">© 2026 Quazi Sahil Mahammad</p>
-                <p class="footer-tagline">Designed with <span class="heart">❤</span> and lots of coffee</p>
-            </div>
+        <p class="footer-text">© 2026 Quazi Sahil Mahammad. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://x.com/NerDismme" target="_blank">Twitter</a>
+            <a href="https://github.com/QuaziSahil" target="_blank">GitHub</a>
+            <a href="mailto:nerdism.me@gmail.com">Email</a>
         </div>
     </footer>
+
     <script src="scripts/main.js"></script>
 </body>
 

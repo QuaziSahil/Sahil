@@ -4,217 +4,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Quazi Sahil Mahammad - Content Writer & Designer</title>
+    <title>Projects - Quazi Sahil Mahammad</title>
+    <meta name="description"
+        content="Explore the portfolio of Quazi Sahil Mahammad - Featured projects in web design, content creation, and brand development.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
 </head>
 
 <body class="page-projects">
+    <!-- Cursor Glow -->
     <div class="cursor-glow"></div>
+    <div class="noise-overlay"></div>
     <div class="page-transition-overlay"></div>
 
+    <!-- Floating Fragments -->
+    <div class="fragments-container">
+        <div class="fragment fragment--triangle fragment-1"></div>
+        <div class="fragment fragment--diamond fragment-2"></div>
+        <div class="fragment fragment--line fragment-3"></div>
+        <div class="fragment fragment--triangle fragment-4"></div>
+        <div class="fragment fragment--diamond fragment-5"></div>
+        <div class="fragment fragment--line fragment-6"></div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navbar">
-        <a href="index.html" class="logo">Sahil<span>.</span></a>
-        <ul class="nav-links">
-            <li><a href="about.html" class="nav-item">About</a></li>
-            <li><a href="services.html" class="nav-item">Services</a></li>
-            <li><a href="projects.html" class="nav-item active">Projects</a></li>
-            <li><a href="contact.html" class="nav-item">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <a href="index.html" class="logo">SAHIL<span>.</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
-    <section class="projects section-page">
+    <!-- Full-screen Menu Overlay -->
+    <div class="menu-overlay">
+        <nav class="menu-nav">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="projects" style="padding-top: 180px;">
         <div class="container">
-            <h2 class="section-title reveal">My <span class="gradient-text">Projects</span></h2>
-            <p class="section-subtitle reveal">Some of my recent work</p>
+            <div class="section-header reveal">
+                <p class="section-label">Portfolio</p>
+                <h1 class="section-title">SELECTED <span>WORKS</span></h1>
+            </div>
 
             <div class="projects-grid">
-                <!-- NerDism -->
-                <div class="project-card reveal" data-tilt>
-                    <div class="project-image">
-                        <img src="assets/images/nerdism.jpg" alt="NerDism" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://nerdism.me/" class="project-link" target="_blank" title="Live Demo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                    <polyline points="15 3 21 3 21 9" />
-                                    <line x1="10" y1="14" x2="21" y2="3" />
-                                </svg>
-                            </a>
-                            <a href="https://github.com/QuaziSahil/NerDism" class="project-link" target="_blank"
-                                title="GitHub Repo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                                </svg>
-                            </a>
+                <!-- Project 1 - NerDism -->
+                <div class="project-card reveal reveal-delay-1">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop"
+                        alt="NerDism Blog">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>NerDism Blog</h3>
+                            <p>A tech, anime, and gaming blog platform with SEO optimization and modern design.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Firebase</span>
+                                <span>Content</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>NerDism Legacy</h3>
-                        <p>A modern nerd culture blog with rich text editing, SEO optimization, and immersive reading
-                            experience.</p>
-                        <div class="project-tags"><span>React</span><span>Firebase</span><span>Vercel</span></div>
                     </div>
                 </div>
 
-                <!-- CineMatrix -->
-                <div class="project-card reveal" data-tilt>
-                    <div class="project-image">
-                        <img src="assets/images/cinematrix.jpg" alt="CineMatrix" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://quazisahil.github.io/CineMatrix/" class="project-link" target="_blank"
-                                title="Live Demo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                    <polyline points="15 3 21 3 21 9" />
-                                    <line x1="10" y1="14" x2="21" y2="3" />
-                                </svg>
-                            </a>
-                            <a href="https://github.com/QuaziSahil/CineMatrix" class="project-link" target="_blank"
-                                title="GitHub Repo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                                </svg>
-                            </a>
+                <!-- Project 2 - CineMatrix -->
+                <div class="project-card reveal reveal-delay-2">
+                    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&h=500&fit=crop"
+                        alt="CineMatrix">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>CineMatrix</h3>
+                            <p>Episode rating tracker for TV shows with beautiful data visualization.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>TMDB API</span>
+                                <span>Charts</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>CineMatrix</h3>
-                        <p>See series ratings and discover your next binge-watch with this cinematic movie database.</p>
-                        <div class="project-tags"><span>JavaScript</span><span>TMDB API</span><span>React</span></div>
                     </div>
                 </div>
 
-                <!-- CompressIt -->
-                <div class="project-card reveal" data-tilt>
-                    <div class="project-image">
-                        <img src="assets/images/compressit.jpg" alt="CompressIt" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://quazisahil.github.io/compressit/" class="project-link" target="_blank"
-                                title="Live Demo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                    <polyline points="15 3 21 3 21 9" />
-                                    <line x1="10" y1="14" x2="21" y2="3" />
-                                </svg>
-                            </a>
-                            <a href="https://github.com/QuaziSahil/compressit" class="project-link" target="_blank"
-                                title="GitHub Repo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                                </svg>
-                            </a>
+                <!-- Project 3 - CyberNotes -->
+                <div class="project-card reveal reveal-delay-3">
+                    <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=800&h=500&fit=crop"
+                        alt="CyberNotes">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>CyberNotes</h3>
+                            <p>A cyberpunk-themed note-taking app with cloud sync and rich text editing.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Capacitor</span>
+                                <span>Android</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>CompressIt</h3>
-                        <p>Compress images efficiently without losing quality. High-speed, secure, and client-side
-                            processing.</p>
-                        <div class="project-tags"><span>CSS</span><span>JavaScript</span><span>Web Tool</span></div>
                     </div>
                 </div>
 
-                <!-- CyberNotes -->
-                <div class="project-card reveal" data-tilt>
-                    <div class="project-image">
-                        <img src="assets/images/cybernotes.jpg" alt="CyberNotes" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://quazisahil.github.io/cybernotes/" class="project-link" target="_blank"
-                                title="Live Demo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                    <polyline points="15 3 21 3 21 9" />
-                                    <line x1="10" y1="14" x2="21" y2="3" />
-                                </svg>
-                            </a>
-                            <a href="https://github.com/QuaziSahil/cybernotes" class="project-link" target="_blank"
-                                title="GitHub Repo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                                </svg>
-                            </a>
+                <!-- Project 4 - CompressIt -->
+                <div class="project-card reveal reveal-delay-4">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop"
+                        alt="CompressIt">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>CompressIt</h3>
+                            <p>Client-side image compression tool with format conversion and batch processing.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>Canvas API</span>
+                                <span>WebWorkers</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>CyberNotes</h3>
-                        <p>Amazing cyberpunk note-taking app with cloud sync, rich formatting, and a stunning neon UI.
-                        </p>
-                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
                     </div>
                 </div>
 
-                <!-- PeakLiterature -->
-                <div class="project-card reveal" data-tilt>
-                    <div class="project-image">
-                        <img src="assets/images/peakliterature.jpg" alt="PeakLiterature" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://quazisahil.github.io/PeakLiterature/" class="project-link" target="_blank"
-                                title="Live Demo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                    <polyline points="15 3 21 3 21 9" />
-                                    <line x1="10" y1="14" x2="21" y2="3" />
-                                </svg>
-                            </a>
-                            <a href="https://github.com/QuaziSahil/PeakLiterature" class="project-link" target="_blank"
-                                title="GitHub Repo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                                </svg>
-                            </a>
+                <!-- Project 5 - PeakLiterature -->
+                <div class="project-card reveal reveal-delay-1">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop"
+                        alt="PeakLiterature">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>PeakLiterature</h3>
+                            <p>Audiobook platform with chapter management and immersive reading experience.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Audio API</span>
+                                <span>Firebase</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>PeakLiterature</h3>
-                        <p>A curated library of 250+ free audiobooks and ebooks from LibriVox and Project Gutenberg.</p>
-                        <div class="project-tags"><span>JavaScript</span><span>Archive.org API</span><span>GitHub
-                                Pages</span></div>
+                </div>
+
+                <!-- Project 6 - AI Blog Writer -->
+                <div class="project-card reveal reveal-delay-2">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop"
+                        alt="AI Blog Writer">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>AI Blog Writer</h3>
+                            <p>AI-powered writing assistant with inline suggestions and SEO optimization.</p>
+                            <div class="project-tags">
+                                <span>Hugging Face</span>
+                                <span>AI</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="projects-cta reveal">
-                <a href="https://github.com/QuaziSahil" target="_blank" class="btn btn-secondary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path
-                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                    </svg>
-                    View All on GitHub
-                </a>
+            <div class="projects-cta reveal" style="margin-top: 80px;">
+                <a href="contact.html" class="btn btn-primary">Start a Project</a>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="copyright">© 2026 Quazi Sahil Mahammad</p>
-                <p class="footer-tagline">Designed with <span class="heart">❤</span> and lots of coffee</p>
-            </div>
+        <p class="footer-text">© 2026 Quazi Sahil Mahammad. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://x.com/NerDismme" target="_blank">Twitter</a>
+            <a href="https://github.com/QuaziSahil" target="_blank">GitHub</a>
+            <a href="mailto:nerdism.me@gmail.com">Email</a>
         </div>
     </footer>
+
     <script src="scripts/main.js"></script>
 </body>
 

@@ -4,71 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Quazi Sahil Mahammad - Content Writer & Designer</title>
+    <title>About - Quazi Sahil Mahammad</title>
+    <meta name="description"
+        content="Learn about Quazi Sahil Mahammad - Content Writer, Web Designer, and Creative Developer.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
 </head>
 
 <body class="page-about">
+    <!-- Cursor Glow -->
     <div class="cursor-glow"></div>
+    <div class="noise-overlay"></div>
     <div class="page-transition-overlay"></div>
 
+    <!-- Floating Fragments -->
+    <div class="fragments-container">
+        <div class="fragment fragment--triangle fragment-1"></div>
+        <div class="fragment fragment--diamond fragment-2"></div>
+        <div class="fragment fragment--line fragment-3"></div>
+        <div class="fragment fragment--triangle fragment-4"></div>
+        <div class="fragment fragment--diamond fragment-5"></div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navbar">
-        <a href="index.html" class="logo">Sahil<span>.</span></a>
-        <ul class="nav-links">
-            <li><a href="about.html" class="nav-item active">About</a></li>
-            <li><a href="services.html" class="nav-item">Services</a></li>
-            <li><a href="projects.html" class="nav-item">Projects</a></li>
-            <li><a href="contact.html" class="nav-item">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <a href="index.html" class="logo">SAHIL<span>.</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
-    <section class="about section-page">
+    <!-- Full-screen Menu Overlay -->
+    <div class="menu-overlay">
+        <nav class="menu-nav">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" style="padding-top: 180px;">
         <div class="container">
-            <h2 class="section-title reveal">About <span class="gradient-text">Me</span></h2>
+            <div class="section-header reveal">
+                <p class="section-label">About Me</p>
+                <h1 class="section-title">THE <span>STORY</span></h1>
+            </div>
+
             <div class="about-content">
-                <div class="about-image reveal">
-                    <div class="image-wrapper">
-                        <img src="assets/images/sahil.jpg" alt="Quazi Sahil Mahammad">
-                        <div class="image-glow"></div>
-                    </div>
+                <div class="image-wrapper reveal reveal-delay-1">
+                    <img src="assets/images/profile.jpg" alt="Quazi Sahil Mahammad"
+                        onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop'">
+                    <div class="image-frame"></div>
                 </div>
-                <div class="about-text reveal">
-                    <h3>Passionate Creator & Problem Solver</h3>
-                    <p>I'm a creative content writer and designer who transforms ideas into stunning digital realities.
-                        With
-                        expertise in content writing and graphic design, I help businesses and individuals establish
-                        their online presence with style.</p>
-                    <p>My goal is to create experiences that not only look beautiful but also perform flawlessly. Every
-                        pixel matters, every animation tells a story.</p>
-                    <div class="about-stats">
-                        <div class="stat"><span class="stat-number" data-count="5">0</span>+<span
-                                class="stat-label">Projects</span></div>
-                        <div class="stat"><span class="stat-number" data-count="10">0</span>+<span
-                                class="stat-label">Happy Clients</span></div>
-                        <div class="stat"><span class="stat-number" data-count="6">0</span>Months+<span
-                                class="stat-label">Experience</span></div>
+
+                <div class="about-text">
+                    <h3 class="reveal reveal-delay-2">Building Digital Experiences</h3>
+                    <p class="reveal reveal-delay-3">
+                        I'm a passionate content writer and web designer based in India. With a deep love for
+                        technology, anime, and creative storytelling, I bridge the gap between ideas and digital
+                        reality.
+                    </p>
+                    <p class="reveal reveal-delay-4">
+                        My journey began with a curiosity for how things work on the web. Today, I specialize in
+                        crafting compelling content, designing intuitive interfaces, and building memorable brand
+                        experiences.
+                    </p>
+                    <p class="reveal reveal-delay-5">
+                        When I'm not creating, you'll find me exploring new anime series, writing about tech trends,
+                        or experimenting with the latest design tools.
+                    </p>
+
+                    <div class="about-stats reveal reveal-delay-6">
+                        <div class="stat">
+                            <span class="stat-number count-up" data-target="50">0</span>
+                            <span class="stat-label">Projects Done</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number count-up" data-target="30">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number count-up" data-target="3">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- Skills Section -->
+    <section class="services" style="padding-top: 80px;">
         <div class="container">
-            <div class="footer-content">
-                <p class="copyright">© 2026 Quazi Sahil Mahammad</p>
-                <p class="footer-tagline">Designed with <span class="heart">❤</span> and lots of coffee</p>
+            <div class="section-header reveal">
+                <p class="section-label">Expertise</p>
+                <h2 class="section-title">WHAT I <span>DO</span></h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal reveal-delay-1">
+                    <span class="service-number">01</span>
+                    <h3>Content Writing</h3>
+                    <p>Engaging articles, blog posts, and copy that connects with your audience and drives results.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <span class="service-number">02</span>
+                    <h3>Web Design</h3>
+                    <p>Beautiful, responsive websites that tell your brand's story and convert visitors into customers.
+                    </p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <span class="service-number">03</span>
+                    <h3>Brand Identity</h3>
+                    <p>Cohesive visual identities that make your brand memorable and stand out from the competition.</p>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">© 2026 Quazi Sahil Mahammad. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://x.com/NerDismme" target="_blank">Twitter</a>
+            <a href="https://github.com/QuaziSahil" target="_blank">GitHub</a>
+            <a href="mailto:nerdism.me@gmail.com">Email</a>
+        </div>
     </footer>
+
     <script src="scripts/main.js"></script>
 </body>
 
