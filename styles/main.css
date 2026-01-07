@@ -1676,30 +1676,203 @@ a.project-card {
     }
 
     .container {
-        padding: 0 24px;
+        padding: 0 20px;
     }
 
     .hero {
-        padding: 0 24px;
+        padding: 0 20px;
+        min-height: 100svh;
     }
 
     .navbar {
-        padding: 20px 24px;
+        padding: 16px 20px;
     }
 
     .hero-vertical-text {
         display: none;
     }
 
-    .about-stats {
-        flex-wrap: wrap;
+    /* Hero section mobile optimization */
+    .hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-greeting {
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 16px;
+    }
+
+    .hero-name {
+        font-size: clamp(36px, 10vw, 60px);
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+        word-break: break-word;
+    }
+
+    .hero-tagline {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        max-width: 100%;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .scroll-indicator {
+        bottom: 24px;
+    }
+
+    /* Section headers mobile */
+    .section-header {
+        margin-bottom: 48px;
+    }
+
+    .section-title {
+        font-size: clamp(28px, 7vw, 48px);
+    }
+
+    /* About section mobile */
+    .about-content {
         gap: 40px;
     }
 
+    .about-text h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: center;
+    }
+
+    .about-stats {
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: center;
+    }
+
+    .stat {
+        text-align: center;
+        min-width: 80px;
+    }
+
+    .stat-number {
+        font-size: 40px;
+    }
+
+    /* Services mobile */
+    .services-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .service-card-premium {
+        padding: 32px 24px;
+    }
+
+    .service-number {
+        font-size: 48px;
+    }
+
+    .service-content h3 {
+        font-size: 20px;
+    }
+
+    /* Projects mobile */
+    .project-showcase-card {
+        flex-direction: column;
+    }
+
+    .project-logo-wrapper {
+        width: 100%;
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 24px;
+    }
+
+    .project-title {
+        font-size: 24px;
+    }
+
+    /* Contact mobile */
+    .contact-info h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .contact-info p {
+        text-align: center;
+    }
+
+    .contact-details {
+        justify-content: center;
+    }
+
+    .contact-form {
+        padding: 24px;
+    }
+
+    /* Footer mobile */
     .footer {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .hero-name {
+        font-size: clamp(28px, 9vw, 40px);
+    }
+
+    .section-title {
+        font-size: clamp(24px, 8vw, 36px);
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 12px;
+    }
+
+    .about-stats {
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    .service-card-premium {
+        padding: 24px 20px;
+    }
+
+    .project-content {
+        padding: 20px;
     }
 }
 
