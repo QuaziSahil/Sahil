@@ -108,14 +108,11 @@
                 </div>
 
                 <form class="contact-form reveal reveal-delay-2" id="contactForm">
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                    <input type="hidden" name="subject" value="New Contact from Portfolio">
-                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" name="from_name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="reply_to" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
                         <input type="text" name="subject" placeholder="Subject">
@@ -134,21 +131,40 @@
                     <p id="formStatus" style="margin-top: 15px; text-align: center;"></p>
                 </form>
 
+                <!-- EmailJS SDK -->
+                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
                 <script>
-                    // Simple mailto fallback - guaranteed to work
+                    // TODO: Replace these with your EmailJS credentials
+                    // Get them from: https://dashboard.emailjs.com/
+                    const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+                    const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+                    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+                    emailjs.init(EMAILJS_PUBLIC_KEY);
+
                     document.getElementById('contactForm').addEventListener('submit', function (e) {
                         e.preventDefault();
 
-                        const name = this.querySelector('[name="name"]').value;
-                        const email = this.querySelector('[name="email"]').value;
-                        const subject = this.querySelector('[name="subject"]').value || 'Portfolio Contact';
-                        const message = this.querySelector('[name="message"]').value;
+                        const btn = document.getElementById('submitBtn');
+                        const status = document.getElementById('formStatus');
 
-                        const mailtoLink = `mailto:nerdism.me@gmail.com?subject=${encodeURIComponent(subject + ' - from ' + name)}&body=${encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+                        btn.disabled = true;
+                        btn.querySelector('span').textContent = 'Sending...';
+                        status.innerHTML = '';
 
-                        window.location.href = mailtoLink;
-
-                        document.getElementById('formStatus').innerHTML = '<span style="color: #22c55e;">✓ Opening your email client...</span>';
+                        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+                            .then(() => {
+                                status.innerHTML = '<span style="color: #22c55e;">✓ Message sent successfully!</span>';
+                                btn.querySelector('span').textContent = 'Send Message';
+                                btn.disabled = false;
+                                this.reset();
+                            })
+                            .catch((error) => {
+                                console.error('EmailJS Error:', error);
+                                status.innerHTML = '<span style="color: #ef4444;">✗ Failed to send. Please try again.</span>';
+                                btn.querySelector('span').textContent = 'Send Message';
+                                btn.disabled = false;
+                            });
                     });
                 </script>
             </div>
