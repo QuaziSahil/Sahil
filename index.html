@@ -466,12 +466,12 @@
                     </div>
                 </div>
 
-                <form class="contact-form reveal reveal-delay-2" action="https://formspree.io/f/xpwzgkqr" method="POST">
+                <form class="contact-form reveal reveal-delay-2" id="contactForm">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" name="from_name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="reply_to" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
                         <input type="text" name="subject" placeholder="Subject">
@@ -479,7 +479,7 @@
                     <div class="form-group">
                         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
                         <span>Send Message</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
@@ -487,7 +487,44 @@
                             <polygon points="22 2 15 22 11 13 2 9 22 2" />
                         </svg>
                     </button>
+                    <p id="formStatus" style="margin-top: 15px; text-align: center;"></p>
                 </form>
+
+                <!-- EmailJS SDK -->
+                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                <script>
+                    // EmailJS credentials
+                    const EMAILJS_PUBLIC_KEY = 'zfXvN3id729QZRngY';
+                    const EMAILJS_SERVICE_ID = 'service_9ip6lqh';
+                    const EMAILJS_TEMPLATE_ID = 'template_uk9bs11';
+
+                    emailjs.init(EMAILJS_PUBLIC_KEY);
+
+                    document.getElementById('contactForm').addEventListener('submit', function (e) {
+                        e.preventDefault();
+
+                        const btn = document.getElementById('submitBtn');
+                        const status = document.getElementById('formStatus');
+
+                        btn.disabled = true;
+                        btn.querySelector('span').textContent = 'Sending...';
+                        status.innerHTML = '';
+
+                        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+                            .then(() => {
+                                status.innerHTML = '<span style="color: #22c55e;">✓ Message sent successfully!</span>';
+                                btn.querySelector('span').textContent = 'Send Message';
+                                btn.disabled = false;
+                                this.reset();
+                            })
+                            .catch((error) => {
+                                console.error('EmailJS Error:', error);
+                                status.innerHTML = '<span style="color: #ef4444;">✗ Failed to send. Please try again.</span>';
+                                btn.querySelector('span').textContent = 'Send Message';
+                                btn.disabled = false;
+                            });
+                    });
+                </script>
             </div>
         </div>
     </section>
